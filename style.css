@@ -18,7 +18,7 @@ Save as: styles.css
   --maxw: 780px;
   --radius: 14px;
 }
-ul{align-items: center}
+ul, ol{align-items: center; padding-left: 150px; padding-right: 150px}
 p {text-align: center;padding: 10px}
 /* -------- Global Reset & Base -------- */
 *,
