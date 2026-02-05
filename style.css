@@ -1,0 +1,240 @@
+/* ================================
+Tarot Chapter – Minimal Elegant Theme
+Centered layout, hero, ornaments, image gallery
+Save as: styles.css
+================================ */
+
+/* -------- CSS Variables (light) -------- */
+:root {
+  --bg: #faf7f2;
+  --text: #1b1b1b;
+  --muted: #5b5b5b;
+  --brand: #7c3aed;  /* amethyst */
+  --brand-ink: #4c1d95;
+  --panel: #ffffff;
+  --accent: #eaddff;
+  --rule: #e8e1d9;
+  --shadow: 0 10px 25px rgba(31, 27, 45, 0.08);
+  --maxw: 780px;
+  --radius: 14px;
+}
+ul{align-items: center}
+p {text-align: center;padding: 10px}
+/* -------- Global Reset & Base -------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1 {text-align: center}
+html, body {
+  margin: 0;
+  padding: 15px;
+}
+nav {display: flex;justify-content: center;padding: 10px 0;background: #000044}
+nav a {text-decoration: none;padding: 1px 25px;font-size: 18px;background-color: #bebebe;border-style: solid;border-color: #000000;border-radius: 50px}
+
+body {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.65;
+  background: linear-gradient(to bottom left,#e25a91,#e25a91,#e25a91,#F7DC6F,#F7DC6F,#F7DC6F,#8f91ce,#8f91ce,#8f91ce,#58D68D,#58D68D,#58D68D);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;padding: 15px
+}
+
+/* -------- Page Frame (Centers Everything) -------- */
+.wrapper {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 48px 20px 96px;
+}
+
+
+img {
+  width: 200px;
+  display: block;
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow);
+  border: 3px solid rgba(255,255,255,0.8);
+}
+.rank{width: 466px}
+h1.title {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  line-height: 1.15;
+  margin: 0 0 6px;
+  letter-spacing: 0.4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* -------- Content Card (panel look) -------- */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  margin: 28px 0;
+}
+
+/* -------- Headings w/ subtle ornaments -------- */
+h2, h3 {
+  text-align: center;
+  position: relative;
+  margin: 30px auto 18px;
+  padding-top: 8px;
+}
+
+h2::after,
+h3::after {
+  content: "✦";
+  display: block;
+  color: var(--brand);
+  opacity: 0.7;
+  font-size: 0.95rem;
+  margin: 6px auto 0;
+  width: max-content;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--brand-ink);
+  letter-spacing: 0.15px;
+}
+
+/* -------- Centered text & readable paragraphs -------- */
+p, li {
+  font-size: 1.02rem;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make lists look neat and balanced in center layout */
+.panel ul {
+  margin: 10px auto 18px;
+  padding: 0 1.2rem;
+  max-width: 60ch;
+}
+.panel li + li {
+  margin-top: 8px;
+}
+
+/* -------- Callout (for exercises / notes) -------- */
+.callout {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.07), transparent 70%);
+  border: 1px dashed var(--brand);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 18px auto;
+  max-width: 60ch;
+}
+
+/* -------- Image Styles -------- */
+.figure {
+  text-align: center;
+  margin: 26px auto;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--rule);
+}
+
+.figcaption {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Optional: two-up gallery for card images */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 22px auto;
+}
+
+.gallery .card {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.gallery .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* -------- Links -------- */
+a {
+  color: var(--brand-ink);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+a:hover {
+  opacity: 0.9;
+}
+
+/* -------- Small ornaments (rules) -------- */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule), transparent);
+  margin: 24px auto;
+  width: 80%;
+}
+
+/* -------- Footer -------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 40px;
+}
+
+/* -------- Responsive -------- */
+@media (min-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .wrapper {
+    padding-top: 56px;
+  }
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
