@@ -20,9 +20,14 @@ Save as: styles.css
 }
 ul,
 ol {
-  list-style-position: inside;
-  text-align: center;
+  margin: 1em auto;
+  width: fit-content;
   padding-left: 0;
+  list-style-position: inside;
+}
+
+li {
+  text-align: left;
 }
 p {text-align: center;padding: 10px}
 /* -------- Global Reset & Base -------- */
