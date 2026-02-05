@@ -18,7 +18,12 @@ Save as: styles.css
   --maxw: 780px;
   --radius: 14px;
 }
-ul, ol{align-items: center; padding-left: 150px; padding-right: 150px}
+ul,
+ol {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+}
 p {text-align: center;padding: 10px}
 /* -------- Global Reset & Base -------- */
 *,
